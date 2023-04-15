@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            list-style-type: none;
+            font-family: sans-serif;
+        }
+
+        main {
+            width: 100%;
+            height: 100vh;
+            background: url(assert/img/bg-3.jpg) no-repeat;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 50%;
+            height: 500px;
+            background: rgba(255, 255, 255, 0.25);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            backdrop-filter: blur(3px);
+            -webkit-backdrop-filter: blur(3px);
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+
+        .search {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        .search input {
+            padding: 0.7rem;
+            border: none;
+            outline: none;
+            width: auto;
+            min-width: 10%;
+            background: none;
+        }
+
+        .search-box {
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            /* background: #fff; */
+            background: rgba(255, 255, 255, 0.65);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            backdrop-filter: blur(3px);
+            -webkit-backdrop-filter: blur(3px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            justify-content: space-between;
+            width: 40%;
+            padding: 0.2rem 0.7rem;
+        }
+
+        .search-box>i {
+            color: #757575;
+        }
+
+        a,
+        a:visited {
+            color: inherit;
+        }
+
+        ul {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-gap: 1.1rem;
+            padding: 1rem;
+        }
+
+        ul>li {
+            padding: 0.5rem 0.3rem;
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            flex-flow: wrap;
+        }
+
+        ul>li>div {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 0.5rem;
+        }
+
+        ul>li>div>a>i {
+            font-size: 1.8rem;
+        }
+
+        ul>li>strong {
+            text-transform: capitalize;
+            font-size: 0.9rem;
+            font-weight: 400;
+            white-space: nowrap;
+        }
+
+        ul>li:first-of-type>div {
+            color: palevioletred;
+        }
+
+        li:nth-of-type(2)>div,
+        li:nth-of-type(3)>div,
+        li:nth-of-type(6)>div,
+        li:nth-of-type(17)>div {
+            color: dodgerblue;
+        }
+
+        li:nth-of-type(5)>div {
+            color: orangered;
+        }
+
+        li:nth-of-type(7)>div {
+            color: rgb(9, 82, 9);
+        }
+
+        li:nth-of-type(9)>div {
+            color: plum;
+        }
+
+        li:nth-of-type(10)>div {
+            color: slateblue;
+        }
+
+        li:nth-of-type(11)>div {
+            color: rgb(28, 28, 84);
+        }
+
+        li:nth-of-type(13)>div {
+            color: rgb(190, 36, 36);
+        }
+
+        li:nth-of-type(14)>div {
+            color: rgb(109, 170, 17);
+        }
+
+        li:nth-of-type(15)>div,
+        li:nth-of-type(19)>div {
+            color: red;
+        }
+
+        li:nth-of-type(16)>div {
+            color: orange;
+        }
+
+        li:nth-of-type(20)>div {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <div class="search">
+                <div class="search-box">
+                    <input type="text" id="inp" placeholder="Search">
+                    <i class="bi bi-search"></i>
+                </div>
+            </div>
+            <ul>
+                <li data-value="instagram">
+                    <div><a href="#"><i class="bi bi-instagram"></i></a></div>
+                    <strong>instagram</strong>
+                </li>
+
+                <li data-value="telegram">
+                    <div><a href="#"><i class="bi bi-telegram"></i></a></div>
+                    <strong>telegram</strong>
+                </li>
+
+                <li data-value="twitter">
+                    <div><a href="#"><i class="bi bi-twitter"></i></a></div>
+                    <strong>twitter</strong>
+                </li>
+
+                <li data-value="twitch">
+                    <div><a href="#"><i class="bi bi-twitch"></i></a></div>
+                    <strong>twitch</strong>
+                </li>
+
+                <li data-value="reddit">
+                    <div><a href="#"><i class="bi bi-reddit"></i></a></div>
+                    <strong>reddit</strong>
+                </li>
+
+                <li data-value="linkedin">
+                    <div><a href="#"><i class="bi bi-linkedin"></i></a></div>
+                    <strong>linkedin</strong>
+                </li>
+
+                <li data-value="spotify">
+                    <div><a href="#"><i class="bi bi-spotify"></i></a></div>
+                    <strong>spotify</strong>
+                </li>
+
+                <li data-value="behance">
+                    <div><a href="#"><i class="bi bi-behance"></i></a></div>
+                    <strong>behance</strong>
+                </li>
+
+                <li data-value="dribbble">
+                    <div><a href="#"><i class="bi bi-dribbble"></i></a></div>
+                    <strong>dribbble</strong>
+                </li>
+
+                <li data-value="discord">
+                    <div><a href="#"><i class="bi bi-discord"></i></a></div>
+                    <strong>discord</strong>
+                </li>
+
+                <li data-value="facebook">
+                    <div><a href="#"><i class="bi bi-facebook"></i></a></div>
+                    <strong>facebook</strong>
+                </li>
+
+                <li data-value="github">
+                    <div><a href="#"><i class="bi bi-github"></i></a></div>
+                    <strong>github</strong>
+                </li>
+
+                <li data-value="google">
+                    <div><a href="#"><i class="bi bi-google"></i></a></div>
+                    <strong>google</strong>
+                </li>
+
+                <li data-value="line">
+                    <div><a href="#"><i class="bi bi-line"></i></a></div>
+                    <strong>line</strong>
+                </li>
+
+                <li data-value="pinterest">
+                    <div><a href="#"><i class="bi bi-pinterest"></i></a></div>
+                    <strong>pinterest</strong>
+                </li>
+
+                <li data-value="stackoverflow">
+                    <div><a href="#"><i class="bi bi-stack-overflow"></i></a></div>
+                    <strong>stack overflow</strong>
+                </li>
+
+                <li data-value="skype">
+                    <div><a href="#"><i class="bi bi-skype"></i></a></div>
+                    <strong>skype</strong>
+                </li>
+
+
+                <li data-value="vimeo">
+                    <div><a href="#"><i class="bi bi-vimeo"></i></a></div>
+                    <strong>vimeo</strong>
+                </li>
+
+                <li data-value="youtube">
+                    <div><a href="#"><i class="bi bi-youtube"></i></a></div>
+                    <strong>youtube</strong>
+                </li>
+
+
+                <li data-value="whatsapp">
+                    <div><a href="#"><i class="bi bi-whatsapp"></i></a></div>
+                    <strong>whatsapp</strong>
+                </li>
+            </ul>
+        </div>
+    </main>
+    <script>
+        const inp = document.querySelector('#inp');
+        const _li = document.querySelectorAll('li');
+        inp.addEventListener('input', function () {
+            let filter, _data;
+            filter = (inp.value).toUpperCase();
+            _li.forEach((val) => {
+                _data = (val.getAttribute('data-value')).toUpperCase();
+                if (_data.indexOf(filter) > -1) {
+                    val.style.display = '';
+                } else {
+                    val.style.display = 'none';
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>
