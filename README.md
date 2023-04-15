@@ -1,3 +1,3 @@
 # simple-search
 
-🔗Live Demo : 
+🔗Live Demo :  https://masiimc.github.io/simple-search/
